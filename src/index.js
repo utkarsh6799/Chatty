@@ -2,6 +2,7 @@ const socketio = require('socket.io')
 const path = require('path')
 const http = require('http')
 const express = require('express')
+const { generateMessage } = require('./utils/messages')
 
 
 const app = express()
@@ -21,12 +22,12 @@ app.use(express.static(publicDirectoryPath))
 io.on('connection', (socket) => {
    console.log('New connection of web socket')
 
-   socket.emit('message', 'Welcome!')
-   socket.broadcast.emit('message', 'A new User has joined!')
+   socket.emit('message', generateMessage('Welcome!') )
+   socket.broadcast.emit('message', generateMessage('A new User has joined!'))
 
    socket.on('sendMessage', (message, callback) => {
 
-    io.emit('message', message)
+    io.emit('message', generateMessage(message))
     callback('delivered!')
 
     
@@ -38,7 +39,7 @@ io.on('connection', (socket) => {
    })
 
    socket.on('disconnect', () => {
-       io.emit('message', 'A User has left!')
+       io.emit('message', generateMessage('A User has left!'))
    })
 
 })
