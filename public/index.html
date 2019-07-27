@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+   <title>Chatty</title>
+   <link rel="icon" href="/img/favicon.png">
+   <link rel="stylesheet" href="/css/styles.min.css">
     </head>
     <body>
-        Chat App
+        <div class="chat">
+            <div class="chat__sidebar">
+
+            </div>
+            <div class="chat__main">
+                <div id="messages" class="chat__messages"></div>
+
+               <div class="compose">
+                <form id="form">
+                    <input name="message" placeholder="Message">
+                    <button id="increment">send</button>
+                
+                </form>
+                <button id="send-location">Send location</button>
+               </div>
+
+               
+            </div>
+        </div>
 
 
-        <div id="messages"></div>
-
-
-        <form id="form">
-            <input name="message" placeholder="Message">
-            <button id="increment">send</button>
-        
-        </form>
-        <button id="send-location">Send location</button>
-        
-        <script id="message-template" type="text/html">
-           <div>
-              <p>{{createdAt}} - {{message}}</p>
+       <script id="message-template" type="text/html">
+           <div class="message">
+               <p>
+                   <span class="message__name">User name</span>
+                   <span class="meta">{{createdAt}}</spam>
+               </P>
+              <p>{{message}}</p>
             </div>
         </script>
 
