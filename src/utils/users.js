@@ -54,3 +54,8 @@ const removedUser = removeUser(22)
 
 console.log(removedUser)
 console.log(users)
+
+module.exports = {
+    addUser,
+    removeUser
+}
