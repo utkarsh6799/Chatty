@@ -11,6 +11,10 @@
  //templates
  const messageTemplates = document.querySelector('#message-template').innerHTML
  const locationTemplates = document.querySelector('#location-template').innerHTML
+ 
+
+ //Options
+ const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix: true })
 
 
 socket.on('message', (message) => {
@@ -69,3 +73,5 @@ $messageForm.addEventListener('submit', (e) => {
         })
       })
 })
+
+socket.emit('join', { username, room })
