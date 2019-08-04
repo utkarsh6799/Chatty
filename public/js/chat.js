@@ -74,4 +74,6 @@ $messageForm.addEventListener('submit', (e) => {
       })
 })
 
-socket.emit('join', { username, room })
+socket.emit('join', { username, room }, (error) => {
+    
+})

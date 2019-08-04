@@ -3,7 +3,7 @@ const path = require('path')
 const http = require('http')
 const express = require('express')
 const { generateMessage, generateLocationMessage } = require('./utils/messages')
-
+const { addUser, removeUser, getUser, getUsersInRoom } = require('./utils/users')
 
 const app = express()
 const server = http.createServer(app)
@@ -22,11 +22,20 @@ app.use(express.static(publicDirectoryPath))
 io.on('connection', (socket) => {
    console.log('New connection of web socket')
 
-   socket.on('join', ({ username, room }) => {
+   socket.on('join', ({ username, room }, callback) => {
+      const { error, user } = addUser({ id: socket.id, username, room })
+      
+      if(error){
+        return callback(error)
+      }
+
+
       socket.join(room)
 
       socket.emit('message', generateMessage('Welcome!') )
       socket.broadcast.to(room).emit('message', generateMessage(`${username} has joined!`))
+
+      callback()
     
 
     })
