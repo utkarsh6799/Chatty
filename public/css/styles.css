@@ -196,7 +196,7 @@ button:disabled {
 .login{
     cursor: pointer;
     padding: 12px;
-    background:  black;
+    background:#6b47b8;
     border: none;
     border-radius: none;
     color: white;
@@ -204,9 +204,39 @@ button:disabled {
     transition: background .3s ease;
     font-family: 'Montserrat', sans-serif;
 }
+.login:hover{
+    background: #7C5CBF;
+    
+    transition: all 0.2s ease-out;
+}
 
 
 @media (max-width:360px){
+
+    .centered-form__box {
+        box-shadow: 0px 0px 17px 1px rgba(0,0,0,0.2);
+        background: #F7F7FA;
+        padding: 30px;
+        width: 360px;
+        height: 100vh;
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    .centered-form__box h1{
+        padding-left: 35%;
+    }
+    .centered-form button {
+        width: 100%;
+        border-radius: 30px;
+    }
+    
+    .centered-form input {
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    .image{
+        width: 300px;
+    }
 
     .message__name {
         
