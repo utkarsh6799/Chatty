@@ -17,6 +17,9 @@
  //Options
  const { username, room } = Qs.parse(location.search, { ignoreQueryPrefix: true })
 
+const autoScroll = () => {
+ 
+}
 
 socket.on('message', (message) => {
     console.log(message)       
@@ -26,7 +29,7 @@ socket.on('message', (message) => {
         createdAt: moment(message.createdAt).format('h:mm a')
     })
     $messages.insertAdjacentHTML('beforeend', html)
-    
+    autoScroll()
 
 })
 
@@ -39,6 +42,7 @@ socket.on('locationMessage', (message) => {
         createdAt: moment(message.createdAt).format('h:mm a')
     })
     $messages.insertAdjacentHTML('beforeend', html)
+    autoScroll()
 })
 
 socket.on('roomData', ({ room, users }) => {
