@@ -26,7 +26,10 @@ const autoScroll = () => {
     const newMessageMargin = parseInt(newMessageStyles.marginBottom)
     const newMessageHeight = $newMessage.offsetHeight + newMessageMargin
 
-    
+    // visible HEight
+    const visibleHeight = $messages.offsetHeight
+
+
 }
 
 socket.on('message', (message) => {
