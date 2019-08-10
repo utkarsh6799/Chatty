@@ -11,6 +11,7 @@
  //templates
  const messageTemplates = document.querySelector('#message-template').innerHTML
  const locationTemplates = document.querySelector('#location-template').innerHTML
+ const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML
  
 
  //Options
@@ -41,8 +42,11 @@ socket.on('locationMessage', (message) => {
 })
 
 socket.on('roomData', ({ room, users }) => {
-    console.log(room)
-    console.log(users)
+   const html = Mustache.render(sidebarTemplate, {
+       room,
+       users
+   })
+   document.querySelector('#sidebar').innerHTML = html
 })
 
 $messageForm.addEventListener('submit', (e) => {
