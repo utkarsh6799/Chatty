@@ -209,6 +209,13 @@ button:disabled {
     
     transition: all 0.2s ease-out;
 }
+.developer{
+    margin:16px 10px 0 45px;
+    font-size: 10px;
+}
+.developer a{
+    text-decoration: none;
+}
 
 
 @media (max-width:360px){
@@ -315,6 +322,11 @@ button:disabled {
     }
     .compose{
         padding: 16px;
+    }
+    .developer{
+        padding-top: 20px;
+        margin:16px 10px 0 80px;
+        font-size: 10px;
     }
 }
 
