@@ -217,6 +217,37 @@ button:disabled {
     text-decoration: none;
 }
 
+@media (max-width:500px){
+    .developer{
+        margin:16px 10px 0 75px;
+        font-size: 10px;
+    }
+    .centered-form__box {
+        box-shadow: 0px 0px 17px 1px rgba(0,0,0,0.2);
+        background: #F7F7FA;
+        padding: 30px;
+        width: 360px;
+        
+        margin-left: 15%;
+        margin-top: 20%;
+    }
+    .centered-form__box h1{
+        padding-left: 35%;
+    }
+    .centered-form button {
+        width: 100%;
+        border-radius: 30px;
+    }
+    
+    .centered-form input {
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    .image{
+        width: 300px;
+    }
+}
+
 
 @media (max-width:360px){
 
