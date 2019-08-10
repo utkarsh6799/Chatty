@@ -23,9 +23,10 @@ const autoScroll = () => {
 
     // Height of new message
     const newMessageStyles = getComputedStyle($newMessage)
-    const newMessageHeight = $newMessage.offsetHeight
+    const newMessageMargin = parseInt(newMessageStyles.marginBottom)
+    const newMessageHeight = $newMessage.offsetHeight + newMessageMargin
 
-    console.log(newMessageStyles)
+    
 }
 
 socket.on('message', (message) => {
