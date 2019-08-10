@@ -17,7 +17,7 @@ input {
 body {
     line-height: 1.4;
     color: #333333;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -35,6 +35,7 @@ input {
     border: 1px solid #eeeeee;
     padding: 12px;
     outline: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 button {
@@ -42,9 +43,11 @@ button {
     padding: 12px;
     background: #7C5CBF;
     border: none;
+    border-radius: 30px;
     color: white;
     font-size: 16px;
     transition: background .3s ease;
+    font-family: 'Montserrat', sans-serif;
 }
 
 button:hover {
@@ -58,29 +61,37 @@ button:disabled {
 
 /* Join Page Styles */
 
-.centered-form {
+/* .centered-form {
     background: #333744;
     width: 100vw;
     height: 100vh;   
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .centered-form__box {
-    box-shadow: 0px 0px 17px 1px #1D1F26;
+    box-shadow: 0px 0px 17px 1px rgba(0,0,0,0.2);
     background: #F7F7FA;
-    padding: 24px;
-    width: 250px;
+    padding: 30px;
+    width: 300px;
+    margin-left: 40%;
+    margin-top: 10%;
 }
-
+.centered-form__box h1{
+    padding-left: 35%;
+}
 .centered-form button {
     width: 100%;
+    border-radius: 30px;
 }
 
 .centered-form input {
     margin-bottom: 16px;
     width: 100%;
+}
+.image{
+    width: 250px;
 }
 
 /* Chat Page Layout */
@@ -126,11 +137,12 @@ button:disabled {
 
 .message__meta {
     color: #777;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .message a {
     color: #0070CC;
+    text-decoration: none;
 }
 
 /* Message Composition Styles */
@@ -180,4 +192,84 @@ button:disabled {
     list-style-type: none;
     font-weight: 300;
     padding: 12px 24px 0 24px;
+}
+
+
+@media (max-width:360px){
+
+    .message__name {
+        
+        font-size: 12px;
+        
+    }
+    .message__meta {
+        
+        font-size: 8px;
+    }
+    .greeting{
+        font-size: 14px;
+    }
+    .chat__sidebar {
+        height: 100vh;
+        color: white;
+        background: #333744;
+        width: 150px;
+        overflow-y: scroll
+    }
+    .room-title {
+        font-weight: 600;
+        font-size: 16px;
+        background: #2c2f3a;
+        padding: 25px;   
+    }
+    .list-title {
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 4px;
+        padding: 12px 24px 0 24px;
+    }
+    .users {
+        list-style-type: none;
+        font-weight: 200;
+        padding: 12px 24px 0 24px;
+        font-size: 11px;
+    }
+    button {
+        cursor: pointer;
+        padding: 0px;
+        background: transparent;
+        border: none;
+        border-radius: none;
+        color: black;
+        font-size: 4px;
+        transition: background .3s ease;
+        font-family: 'Montserrat', sans-serif;
+    }
+    button:hover {
+        background: none;
+    }
+    
+    button:disabled {
+        cursor: default;
+        color: #727272;
+    }
+    .location{
+        font-size: 14px;
+    }
+    .compose input {
+        border: 1px solid #eeeeee;
+        width: 100%;
+        padding: 8px;
+        border-radius: 30px;
+        padding-right: 100px;
+        margin: 0 10px 0 0;
+        flex-grow: 1;
+        
+    }
+    .compose input placeholder{
+       font-size: 5px;
+    }
+    .compose{
+        padding: 16px;
+    }
 }

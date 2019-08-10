@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
    <title>Chatty</title>
    <link rel="icon" href="/img/chatty.png">
-   <link rel="stylesheet" href="/css/styles.min.css">
+   
+   <link rel="stylesheet" href="/css/styles.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
     </head>
     <body>
         <div class="chat">
@@ -16,10 +20,10 @@
                <div class="compose">
                 <form id="form">
                     <input name="message" placeholder="Message" required autocomplete="off">
-                    <button id="increment">Send</button>
+                    <button id="increment"><i class="fas fa-paper-plane"></i></button>
                 
                 </form>
-                <button id="send-location">Send location</button>
+                <button id="send-location"><i class="fas fa-map-marker-alt"></i></button>
                </div>
 
                
@@ -31,9 +35,9 @@
            <div class="message">
                <p>
                    <span class="message__name">{{username}}</span>
-                   <span class="meta">{{createdAt}}</spam>
+                   <span class="message__meta">{{createdAt}}</spam>
                </P>
-              <p>{{message}}</p>
+              <p class="greeting">{{message}}</p>
             </div>
         </script>
 
@@ -42,10 +46,10 @@
 
                     <p>
                        <span class="message__name">{{username}}</span>
-                       <span class="meta">{{createdAt}}</spam>
+                       <span class="message__meta">{{createdAt}}</spam>
                     </P>
 
-               <p><a href="{{url}}" target="_blank">My current location</a></p>
+               <p class="location"><a href="{{url}}" target="_blank">My current location</a></p>
              </div>
          </script>
 
