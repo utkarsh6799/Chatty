@@ -40,23 +40,21 @@ input {
 
 button {
     cursor: pointer;
-    padding: 12px;
-    background: #7C5CBF;
+    padding: 0px;
+    background: transparent;
     border: none;
-    border-radius: 30px;
-    color: white;
-    font-size: 16px;
+    border-radius: none;
+    color: black;
+    font-size: 10px;
     transition: background .3s ease;
     font-family: 'Montserrat', sans-serif;
 }
 
-button:hover {
-    background: #6b47b8;
-}
+
 
 button:disabled {
     cursor: default;
-    background: #7c5cbf94;
+    color: #727272;
 }
 
 /* Join Page Styles */
@@ -162,14 +160,16 @@ button:disabled {
 
 .compose input {
     border: 1px solid #eeeeee;
-    width: 100%;
+    width: 50%;
     padding: 12px;
-    margin: 0 16px 0 0;
+    padding-left: 20px;
+    border-radius: 30px;
+    margin: 0 20px 0 0;
     flex-grow: 1;
 }
 
 .compose button {
-    font-size: 14px;
+    font-size: 20px;
 }
 
 /* Chat Sidebar Styles */
@@ -192,6 +192,17 @@ button:disabled {
     list-style-type: none;
     font-weight: 300;
     padding: 12px 24px 0 24px;
+}
+.login{
+    cursor: pointer;
+    padding: 12px;
+    background:  black;
+    border: none;
+    border-radius: none;
+    color: white;
+    font-size: 12px;
+    transition: background .3s ease;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -245,6 +256,9 @@ button:disabled {
         transition: background .3s ease;
         font-family: 'Montserrat', sans-serif;
     }
+    .compose button{
+        font-size: 14px;
+    }
     button:hover {
         background: none;
     }
@@ -273,3 +287,86 @@ button:disabled {
         padding: 16px;
     }
 }
+
+@media (max-width:375px){
+
+    .message__name {
+        
+        font-size: 12px;
+        
+    }
+    .message__meta {
+        
+        font-size: 8px;
+    }
+    .greeting{
+        font-size: 14px;
+    }
+    .chat__sidebar {
+        height: 100vh;
+        color: white;
+        background: #333744;
+        width: 150px;
+        overflow-y: scroll
+    }
+    .room-title {
+        font-weight: 600;
+        font-size: 16px;
+        background: #2c2f3a;
+        padding: 25px;   
+    }
+    .list-title {
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 4px;
+        padding: 12px 24px 0 24px;
+    }
+    .users {
+        list-style-type: none;
+        font-weight: 200;
+        padding: 12px 24px 0 24px;
+        font-size: 11px;
+    }
+    button {
+        cursor: pointer;
+        padding: 0px;
+        background: transparent;
+        border: none;
+        border-radius: none;
+        color: black;
+        font-size: 4px;
+        transition: background .3s ease;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .compose button{
+        font-size: 14px;
+    }
+    button:hover {
+        background: none;
+    }
+    
+    button:disabled {
+        cursor: default;
+        color: #727272;
+    }
+    .location{
+        font-size: 14px;
+    }
+    .compose input {
+        border: 1px solid #eeeeee;
+        width: 100%;
+        padding: 8px;
+        border-radius: 30px;
+        padding-right: 100px;
+        margin: 0 10px 0 0;
+        flex-grow: 1;
+        
+    }
+    .compose input placeholder{
+       font-size: 5px;
+    }
+    .compose{
+        padding: 16px;
+    }
+}
+
